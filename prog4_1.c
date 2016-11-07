@@ -5,7 +5,7 @@
     #include <lauxlib.h>
     #include <lualib.h>
     
-    int main (void) {
+    int main (int argc, char **argv) {
       printf("Assignment #4-1,Taylor Ewertz, t_ewertz@yahoo.com\n");
       char buff[256];
       int error;
@@ -15,7 +15,7 @@
       luaopen_io(L);               /* opens the I/O library */
       luaopen_string(L);           /* opens the string lib. */
       luaopen_math(L);             /* opens the math lib. */
-      luaL_dofile(L, "test.lua");
+      luaL_dofile(L, argv[1]);
     
       while (fgets(buff, sizeof(buff), stdin) != NULL) {
         error = luaL_loadbuffer(L, buff, strlen(buff), "line") ||
