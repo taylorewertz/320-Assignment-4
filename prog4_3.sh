@@ -2,7 +2,7 @@
 
 echo "Assignment #4-3, Taylor Ewertz, t_ewertz@yahoo.com"
 
-gcc prog4_1.c -llua -lm -ldl -L /home/taylor/lua-5.3.3/src/ -I /home/taylor/lua-5.3.3/src
+gcc prog4_1.c -llua -lm -ldl -L lua-5.3.3/src/ -I lua-5.3.3/src
 
 po=`./a.out $1`
 
